@@ -331,7 +331,7 @@ public class GhcMod {
                                     annotation.registerFix(new AddToImports(matcher.group(1)));
                                 }
                             }),
-              Pair.create(Pattern.compile("Not in scope: type constructor or class ‘([^’]+)’"),
+              Pair.create(Pattern.compile("Not in scope:[^‘]*‘([^’]+)’"),
                 new RegisterFixHandler() {
                     @Override
                     public void apply(Matcher matcher, Annotation annotation, Problem problem) {
